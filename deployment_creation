@@ -1,0 +1,44 @@
+
+
+Key takeaways from this video include:
+
+Deployments are a higher-level abstraction that encapsulates the creation and management of pods.
+ReplicaSets are responsible for ensuring that the desired number of pods are running for a deployment.
+Deployments are used to implement auto-healing and zero-downtime deployments.
+Abhishek demonstrates these concepts by creating a deployment and watching how ReplicaSets automatically create and manage pods. He also shows how to delete pods and watch as ReplicaSets automatically recreate them.
+
+Here are some additional details from the video:
+
+Pods are the basic unit of deployment in Kubernetes. They are a group of one or more containers that are deployed together on a single node.
+ReplicaSets are controllers that ensure that the desired number of pods are running for a deployment. They do this by creating new pods if the number of pods falls below the desired number, and by deleting pods if the number of pods exceeds the desired number.
+Deployments are used to implement auto-healing and zero-downtime deployments. Auto-healing means that if a pod fails, a new pod will be automatically created to replace it. Zero-downtime deployments means that there is no downtime for users when a new deployment is rolled out.
+
+   # to create the deployment.
+    vi deployment
+
+    apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nginx-deployment
+  labels:
+    app: nginx
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: nginx
+  template:
+    metadata:
+      labels:
+        app: nginx
+    spec:
+      containers:
+      - name: nginx
+        image: nginx:1.14.2
+        ports:
+        - containerPort: 80
+:wq!
+    kubectl create -f deployment.yaml.
+
+    kubectl get deployments 
+    
