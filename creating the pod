@@ -1,0 +1,31 @@
+1st we need to create the docker image.
+
+docker pull nginx:latest 
+docker tag nginx:latest akhil626/nginx:v1
+docker push akhil626/nginx:v1
+
+vi pod.yml
+apiVersion: v1
+kind: Pod
+metadata:
+  name: nginx-myrepo
+spec:
+  containers:
+  - name: nginx-myrepo
+    image: akhil626/nginx:v1
+    ports:
+    - containerPort: 80
+:wq!
+
+kubectl create -f pod.yaml
+
+kubectl get pods -o
+
+minikube ssh 
+curl <pod IP>
+
+#to debug the pod 
+
+kubectl logs nginx-myrepo
+
+kubectl describe nginx-myrepo
