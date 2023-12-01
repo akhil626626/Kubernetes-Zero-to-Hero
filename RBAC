@@ -1,0 +1,15 @@
+
+
+YouTube
+The video is about Kubernetes RBAC. The speaker, Abhishek, starts by explaining what Kubernetes RBAC is and why it is important. He then goes over the two main parts of Kubernetes RBAC: users and service accounts. He explains how to create users and service accounts, and then goes over the three main resources for managing RBAC: roles, cluster roles, and role bindings. Finally, he shows how to create a 30-day free OpenShift cluster and use it to practice with RBAC.
+
+Here are some key details from the video:
+
+Kubernetes RBAC is a way to control who has access to what resources in a Kubernetes cluster.
+There are two main parts of Kubernetes RBAC: users and service accounts.
+Users are people who can log in to a Kubernetes cluster.
+Service accounts are used by applications to access resources in a Kubernetes cluster.
+There are three main resources for managing RBAC: roles, cluster roles, and role bindings.
+Roles are used to define a set of permissions.
+Cluster roles are used to define a set of permissions that can be used across a cluster.
+Role bindings are used to assign roles to users or service accounts.
