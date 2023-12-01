@@ -1,0 +1,16 @@
+
+Kubernetes is a container orchestration platform.
+
+Problems with container.
+
+1. Single host
+2. Auto healing. For example, one person in the company, by mistake deleted the pod. they we need to manually up the pod. If we have 
+1000 of docker images it impossible  to monitor.
+3. Autoscaling.
+4. Docker doesn't have enterprise-level support.
+
+
+like security, load balancer, API gateway, firewall etc.
+
+
+
